@@ -33,6 +33,35 @@
 - **읽기(Peek)**
 : 마지막위치(top)에 해당하는 데이터를 읽는다.
 
+## 예시 
+### 파이썬으로 스택을 직접 구현. [백준 10828번]
+```    
+i = int(input())
+stack = []
+for x in range(i):
+    n = input().split()
+    if n[0] == 'push':
+        stack.append(int(n[1]))
+    elif n[0] == 'pop':
+        try: 
+            print(stack.pop())
+        except: 
+            print(-1)
+            continue
+    elif n[0] == 'size':
+        print (len(stack))
+    elif n[0] == 'empty':
+        if len(stack) == 0: 
+            print(1)
+        else: 
+            print(0)
+    elif n[0] == 'top':
+        if len(stack) == 0: 
+            print(-1)
+            continue
+        print(stack[-1])
+```
+
 
 ## 특징 및 장점
 
